@@ -1,0 +1,27 @@
+<div class="author">
+    <div class="author-name"><h1>Hi, i am Atomic</h1></div>
+    <div class="author-body">Lorem, ipsum dolor sit amet consectetur</div>
+</div>
+
+<div class="img-wrap">
+    <img src="/img/tim-mossholder-VPfmEa2nc0E-unsplash.jpg" alt="">
+</div>
+
+<section class="articles">
+    <h2 class="articles-heading">Latest Post</h2>
+    <ul class="article-ul">
+
+        <% data.forEach(post => { %>
+
+        <li>
+            <a href="/post/<%- post.id %>">
+                <span><%- post.title %></span>
+                <span class="article-list-date"> <%- post.createdAt.toDateString()  %> </span>
+            </a>
+        </li>
+
+        <% }) %>
+
+    </ul>
+    <a href="#" class="pagination">&lt; View Older Posts</a>
+</section>
